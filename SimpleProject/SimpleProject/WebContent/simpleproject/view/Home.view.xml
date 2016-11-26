@@ -6,54 +6,14 @@
 	xmlns:f="sap.ui.layout.form"
 	 xmlns:html="http://www.w3.org/1999/xhtml"
   xmlns="sap.m">
-  <ScrollContainer
-  height="100%"
-  width="100%"
-  vertical="true"
-  focusable="true">
-  
-  <html:div class="loginPanel">
-	  <!-- <Panel headerText = "My Login" expandable = "true" expanded = "true">
-	    <content>  
-	    <Image src="images/box-159302_640.png" />
-	        <Input id="userID" placeholder="Username"/>
-	        <Button text="Login" press="onLogin"/>
-	   </content>
-	   </Panel> -->
-	   <l:Grid
-	   	class="sapUiSmallMarginTop"
-	   	hSpacing="2"
-	   	defailtIndent="L6 M6 S6"
-	   	defaultSpan="L6 M6 S10"
-	   	position="Center">
-	   	<l:content>
-	   		<html:br />
-	   		
-	   		<html:br />
-	   		<Image  src="images/box-159302_640.png">
-	   			<layoutData>
-	   				<l:GridData span="L12 M12 S12"
-	   				linebreakL="true"
-	   				linebreakM="true"
-	   				linebreakS="true" />
-	   			</layoutData>
-	   		</Image>
-	   		<!-- <Label text="name">
-	   			<layoutData>
-	   				<l:GridData span="L6 M6 S6"/>
-	   			</layoutData>
-			</Label>
-			<Input id="nameID" placeholder="Name">
-			<layoutData>
-	   				<l:GridData span="L6 M6 S6"/>
-	   			</layoutData>
-			</Input> -->
-			<f:SimpleForm 
+	<Page showHeader="false" class="sapUiContentPadding" enableScrolling="true">
+		<content>
+						<f:SimpleForm 
 			maxContainerCols="2"
 			editable="true"
 			layout="ResponsiveGridLayout"
 			title="Login"
-			labelSpanL="3"
+			labelSpanL="6"
 			labelSpanM="3"
 			emptySpanL="6"
 			emptySpanM="4"
@@ -70,10 +30,8 @@
 					<Button text="Login" icon="sap-icon://begin" press="onLogin"></Button>
 				</f:content>
 			</f:SimpleForm>
-			
-	   	</l:content>
-	   </l:Grid>
-   </html:div>
-   </ScrollContainer>
+		</content>
+	</Page>
+  
    
 </mvc:View>
