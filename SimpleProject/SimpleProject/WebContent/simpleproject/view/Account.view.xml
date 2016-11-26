@@ -7,11 +7,11 @@
   >
 	<Page title="Account">
 		<content>
-			<List items="{path: '/accounts' , sorter:{path: 'productDescription', group:true}}" showNoData="true">
+			<!--<List items="{path: '/accounts' , sorter:{path: 'productDescription', group:true}}" showNoData="true">
 				<ObjectListItem title="{accountNumber}" type="Navigation" description="{amount}" numberUnit="{currency}"
                     showMarkers="true"
                     number="{parts:[{path:'amount'},{path:'currency'}],type: 'sap.ui.model.type.Currency',formatOptions: {showMeasure: false}}"></ObjectListItem>
-			</List>
+			</List>-->
 			
 				<VBox class="sapUiSmallMargin">
 		<f:SimpleForm id="SimpleFormDisplay480"
