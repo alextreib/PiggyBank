@@ -1,0 +1,5 @@
+<mvc:View controllerName="simpleproject.controller.Account"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+	<Label text="Account page"></Label>
+	</mvc:View>

@@ -1,0 +1,5 @@
+<mvc:View controllerName="simpleproject.controller.Consultant"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+	<Label text="Consultant"></Label>
+</mvc:View>

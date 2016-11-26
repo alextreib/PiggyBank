@@ -1,0 +1,6 @@
+
+<mvc:View controllerName="simpleproject.controller.RuleManagement"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+	<Label text="Rule Management"></Label>
+</mvc:View>
