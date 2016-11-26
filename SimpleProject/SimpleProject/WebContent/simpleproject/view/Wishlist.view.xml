@@ -2,4 +2,28 @@
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m">
 	<Label text="Wishlist"></Label>
+	<Page showHeader="true" title="Wishlist" >
+		<content>
+			<VBox>
+				<List items="" showNoData="false">
+					
+				</List>
+			</VBox>
+		</content>
+		<footer>
+  			<OverflowToolbar>
+  				<Button type="Back" press="onNavBack">
+  					<layoutData>
+  						<OverflowToolbarLayoutData moveToOverflow="false" />
+  					</layoutData>
+  				</Button>
+  				<ToolbarSpacer />
+  				<Button icon="sap-icon://activate" press="onNewWishCreate" ariaLabelledBy="actionButtonLabel">
+  					<layoutData>
+  						<OverflowToolbarLayoutData moveToOverflow="false" />
+  					</layoutData>
+  				</Button>
+  			</OverflowToolbar>
+  		</footer>
+	</Page>
 </mvc:View>

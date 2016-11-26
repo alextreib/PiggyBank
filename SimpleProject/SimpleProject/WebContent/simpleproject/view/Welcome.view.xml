@@ -1,4 +1,39 @@
-<mvc:View
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:t="sap.ui.table" xmlns="sap.m" xmlns:smartTable="sap.ui.comp.smarttable" controllerName="simpleproject.controller.Welcome">
+  <Panel class="sapUiLargeMarginBegin" backgroundDesign="Transparent">
+    <l:Grid class="sapUiSmallMarginTop">
+        <l:content>
+            <Label design="Bold" defaultIndent="L12 M12 S12" text="Welcome User!" textAlign="Center" level="H1"/>
+        </l:content></l:Grid>
+    
+    </Panel>
+    
+      <l:Grid defaultSpan="L12 M12 S12" class="sapUiSmallMarginTop" textAlign="Center" vSpacing="4">
+          <ObjectListItem title="My Accounts" type="Navigation" icon="sap-icon://simple-payment" press="onNav">
+            <layoutData>
+              <l:GridData span="L6 M12 S12"/>
+            </layoutData>
+          </ObjectListItem>
+          <ObjectListItem title="My Rules" type="Navigation" icon="sap-icon://activities" press="onMyRules">
+          <layoutData>
+              <l:GridData span="L6 M12 S12"/>
+            </layoutData>
+          </ObjectListItem>
+          <ObjectListItem title="Wishlist" type="Navigation" icon="sap-icon://paper-plane" press="onWishlist">
+          <layoutData>
+              <l:GridData span="L6 M12 S12"/>
+            </layoutData>
+          </ObjectListItem>
+          <ObjectListItem title="Consultant" type="Navigation" icon="sap-icon://activity-individual" press="onConsultant">
+          <layoutData>
+              <l:GridData span="L6 M12 S12"/>
+            </layoutData>
+          </ObjectListItem>
+          
+        </l:Grid>
+
+</mvc:View>
+
+<!--<mvc:View
   controllerName="simpleproject.controller.Welcome"
    xmlns:mvc="sap.ui.core.mvc"
   xmlns:l="sap.ui.layout"
@@ -44,4 +79,4 @@
 	
 
 
-</mvc:View>
+</mvc:View>-->
