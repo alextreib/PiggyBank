@@ -1,3 +1,4 @@
+var _token_id;
 sap.ui.controller("simpleproject.controller.App", {
 
 /**
@@ -5,9 +6,28 @@ sap.ui.controller("simpleproject.controller.App", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf simpleproject.App
 */
-//	onInit: function() {
-//
-//	},
+	onInit: function() {
+		jQuery.sap.require("sap.m.MessageBox");
+		this.getBankToken();
+	},
+	getBankToken: function()
+	{
+			jQuery.ajax({
+		     type: "POST",
+		     contentType: "application/x-www-form-urlencoded",
+		     url: "https://hackathon.postbank.de/bank-api/gold/postbankid/token",
+		     dataType: "json",
+		     data: "username=HackathonNov01_7&password=hat1116",
+		     headers: {
+		      "API-Key": "485430390021fc15",
+		     },
+		      success: function (data) {    
+		       _token_id = data.token;
+		      // alert("success! Token is:   " + _token_id);         
+		    //   sap.ui.controller("simpleproject.controller.Account").getAccounts ( );
+		      }
+		   });
+	}
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
