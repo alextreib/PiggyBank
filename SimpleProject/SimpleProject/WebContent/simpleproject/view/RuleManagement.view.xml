@@ -1,6 +1,28 @@
-
 <mvc:View controllerName="simpleproject.controller.RuleManagement"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m">
-	<Label text="Rule Management"></Label>
+	<Page showHeader="true" title="Accounting Rule Management" >
+		<content>
+			<VBox>
+				<List items="" showNoData="false">
+					
+				</List>
+			</VBox>
+		</content>
+		<footer>
+  			<OverflowToolbar>
+  				<Button type="Back" press="onNavBack">
+  					<layoutData>
+  						<OverflowToolbarLayoutData moveToOverflow="false" />
+  					</layoutData>
+  				</Button>
+  				<ToolbarSpacer />
+  				<Button icon="sap-icon://create" press="onNewRuleCreate" ariaLabelledBy="actionButtonLabel">
+  					<layoutData>
+  						<OverflowToolbarLayoutData moveToOverflow="false" />
+  					</layoutData>
+  				</Button>
+  			</OverflowToolbar>
+  		</footer>
+	</Page>
 </mvc:View>
