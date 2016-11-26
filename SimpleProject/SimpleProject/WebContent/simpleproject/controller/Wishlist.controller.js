@@ -38,8 +38,6 @@ sap.ui.define([
 		// open dialog
 		jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._dialog);
 		this._dialog.open();
-
- 
         },
         saveWish :function(oEvent)
         {	
