@@ -57,6 +57,7 @@ sap.ui.define([
 		    		console.log(ruleList);
 		    		    		var ruleModel = new JSONModel(ruleList);
             me.getView().setModel(ruleModel);
+            		      		sap.m.MessageToast.show("New Rule is saved!",{duration: 2000});
 		        });
         	});	
         	this._dialog.close();

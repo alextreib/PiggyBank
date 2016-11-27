@@ -1,11 +1,36 @@
 <mvc:View controllerName="simpleproject.controller.RuleManagement"
   xmlns:mvc="sap.ui.core.mvc"
-  xmlns="sap.m">
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
 	<Page showHeader="true" title="Accounting Rule Management" >
 		<content>
 			<VBox>
-				<List items="{/}" showNoData="false">
-						<ObjectListItem title="{ruleName}" type="Navigation" ></ObjectListItem>
+				<List items="{/}" showNoData="true">
+					<items>
+						<CustomListItem>
+							<HBox class="sapUiSmallMarginBegin smallUiTinyMarginTop">
+								<VBox>
+									<core:Icon
+									src="sap-icon://approvals"
+									size="2.5em"
+									 class="sapMSLIImgThumbIcon sapUiIcon sapUiIconMirrorInRTL">
+										<core:layoutData>
+										<FlexItemData growFactor="1"></FlexItemData>
+									</core:layoutData>
+										
+									</core:Icon>
+									
+								</VBox>
+								<VBox>
+									<Label text="{ruleName}" />
+									<Label text="Border: {border}"/>
+									<Label text="Purpose: {purpose}"/>
+								</VBox>
+							</HBox>
+						</CustomListItem>
+		<!--					<ObjectListItem title="{ruleName}" type="Navigation" ></ObjectListItem>-->
+					</items>
+					
 				</List>
 			</VBox>
 		</content>
@@ -17,7 +42,7 @@
   					</layoutData>
   				</Button>
   				<ToolbarSpacer />
-  				<Button icon="sap-icon://create" press="onNewRuleCreate" ariaLabelledBy="actionButtonLabel">
+  				<Button icon="sap-icon://create" press="onNewRuleCreate" ariaLabelledBy="actionButtonLabel" tooltip="Create a new Rule">
   					<layoutData>
   						<OverflowToolbarLayoutData moveToOverflow="false" />
   					</layoutData>

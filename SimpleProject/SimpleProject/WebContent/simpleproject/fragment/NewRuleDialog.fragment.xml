@@ -23,15 +23,15 @@
 				<Label text="ab" />
 				<Input value="{Border}" id="tf_border"/>
 				
-				<Label text="Purpose:" />
+				<Label text="Purpose" />
 				<Input value="{Purpose}" id="tf_purpose"/>
-				<Label text="Account:" />
+				<Label text="Account" />
 <!--				<Select width="100%">
 					<items path="{}">
 						<core:Item key="{}" text="{}" />
 					</items>
 				</Select>-->
-					<Button icon="sap-icon://save" press="saveRule" ariaLabelledBy="actionButtonLabel">
+					<Button icon="sap-icon://save" press="saveRule" ariaLabelledBy="actionButtonLabel" tooltip="Save the rule">
 
   				</Button>
 			</f:content>
