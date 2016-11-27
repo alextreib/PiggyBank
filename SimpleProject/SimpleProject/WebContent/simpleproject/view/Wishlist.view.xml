@@ -1,7 +1,8 @@
 <mvc:View controllerName="simpleproject.controller.Wishlist"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns:core="sap.ui.core"
-  xmlns="sap.m">
+  xmlns="sap.m"
+  	xmlns:l="sap.ui.layout">
 	<Page showHeader="true" title="Wishlist" >
 		<content>
 			<VBox>
@@ -24,8 +25,30 @@
 									<Label text="{product}" />
 									<Label text="Price: {price}"/>
 									<Label text="Deadline: {date}"/>
+									<!--<ProgressIndicator
+									class="sapUiSmallMargin"
+									percentValue="{path: '/price', formatter: '.calcValue'}" 
+									displayValue="{path: '/price', formatter: '.convertPercValue'}" 
+									showValue="true"
+									state="None" />-->
 								</VBox>
+								<!--<VBox>
+									<Button icon="sap-icon://action" press="onShare" ariaLabelledBy="actionButtonLabel"/>
+								</VBox>-->
 							</HBox>
+							<l:VerticalLayout
+		class="sapUiContentPadding"
+		width="100%">
+							<l:content>
+							<ProgressIndicator
+									class="sapUiSmallMarginBottom"
+									percentValue="{path: '/price', formatter: '.calcValue'}" 
+									displayValue="{path: '/price', formatter: '.convertPercValue'}" 
+									showValue="true"
+									state="None" />
+									</l:content>
+									</l:VerticalLayout>
+									
 						</CustomListItem>
 		<!--					<ObjectListItem title="{ruleName}" type="Navigation" ></ObjectListItem>-->
 				</items>
@@ -40,7 +63,13 @@
   					</layoutData>
   				</Button>
   				<ToolbarSpacer />
-  				<Button icon="sap-icon://activate" press="onNewWishCreate" ariaLabelledBy="actionButtonLabel">
+  				<Button icon="sap-icon://share-2" press="onShareWish" ariaLabelledBy="actionButtonLabel">
+  					<layoutData>
+  						<OverflowToolbarLayoutData moveToOverflow="false" tooltip="Share a wish"/>
+  					</layoutData>
+  				</Button>
+  				<ToolbarSpacer />
+  				<Button icon="sap-icon://activate" press="onNewWishCreate" ariaLabelledBy="actionButtonLabel" tooltip="Create a new Wish">
   					<layoutData>
   						<OverflowToolbarLayoutData moveToOverflow="false" />
   					</layoutData>
