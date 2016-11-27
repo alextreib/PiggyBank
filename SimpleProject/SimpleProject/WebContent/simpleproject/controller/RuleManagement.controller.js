@@ -50,7 +50,7 @@ sap.ui.define([
         	var purpose = sap.ui.getCore().byId("tf_purpose").getValue();
         	var jsonObject =  {'ruleName':ruleName, 'border': border,'purpose':purpose};
         	var me = this;
-        	models.create("Rule",jsonObject,function(data){
+        	models.create("rules",jsonObject,function(data){
         		console.log(data);
         		models.getList("rules", function(ruleList) {
 		    		console.log(ruleList);

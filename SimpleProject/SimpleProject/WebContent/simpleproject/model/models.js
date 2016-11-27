@@ -64,7 +64,8 @@ sap.ui.define([
         var me = this;
         me._getOAuthToken(function(oauth_token) {
           jQuery.ajax({
-                  type: "GET",
+                  type: "POST",
+                  contentType: "application/json",
                   url: me.api + "/document/v1/" + me.tenant + "/" + me.client + "/data/" + table,
                   data: JSON.stringify(obj),
                   dataType: "json",
