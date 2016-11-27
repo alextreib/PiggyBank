@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <mvc:View controllerName="simpleproject.controller.Consultant"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
@@ -89,4 +90,97 @@
         </OverflowToolbar>
       </footer>
   </Page>
+=======
+<mvc:View controllerName="simpleproject.controller.Consultant"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+  >
+	<Page title="Consultant">
+		<content>
+			<!--<List items="{path: '/accounts' , sorter:{path: 'productDescription', group:true}}" showNoData="true">
+				<ObjectListItem title="{accountNumber}" type="Navigation" description="{amount}" numberUnit="{currency}"
+                    showMarkers="true"
+                    number="{parts:[{path:'amount'},{path:'currency'}],type: 'sap.ui.model.type.Currency',formatOptions: {showMeasure: false}}"></ObjectListItem>
+			</List>-->
+			
+				<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormDisplay480"
+			minWidth="1024"
+			maxContainerCols="2"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title=""
+			labelSpanL="4"
+			labelSpanM="4"
+			emptySpanL="0"
+			emptySpanM="0"
+			columnsL="2"
+			columnsM="2">
+			<f:content>
+				<core:Title text="Expense overview" />
+				<Image  src="images/expense_overview.jpg" width="40em" >
+				<layoutData>
+	   				<l:GridData span="L12 M12 S12"
+	   				linebreakL="true"
+	   				linebreakM="true"
+	   				linebreakS="true" />
+	   			</layoutData>
+	   			</Image>
+				
+				<core:Title text="User statistics" />
+				<Image  src="images/expense_overview.jpg" width="40em" >
+	   			<layoutData>
+	   				<l:GridData span="L12 M12 S12"
+	   				linebreakL="true"
+	   				linebreakM="true"
+	   				linebreakS="true" />
+	   			</layoutData>
+	   		</Image>
+	   		<!--        <l:flexContent>
+            <viz:Popover id="idPopOver"></viz:Popover>
+            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='pie'>
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{/accounts}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="Info"
+                                value="{productDescription}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="Amount"
+                                value="{amount}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+ 
+                <viz:feeds>
+                    <viz.feeds:FeedItem uid="size" type="Measure"
+                        values="amount" />
+                    <viz.feeds:FeedItem uid="color" type="Dimension"
+                        values="Product descritption" />
+                </viz:feeds>
+            </viz:VizFrame>
+        </l:flexContent>-->
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+			
+		</content>
+		<footer>
+  			<OverflowToolbar>
+  				<Button type="Back" press="onNavBack">
+  					<layoutData>
+  						<OverflowToolbarLayoutData moveToOverflow="false" />
+  					</layoutData>
+  				</Button>
+  			</OverflowToolbar>
+  		</footer>
+	</Page>
+>>>>>>> branch 'master' of https://github.com/alextreib/PiggyBank/
 </mvc:View>
