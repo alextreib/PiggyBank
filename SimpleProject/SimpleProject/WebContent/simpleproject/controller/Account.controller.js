@@ -41,7 +41,7 @@ sap.ui.define([
 		      	var acc = model.getProperty("/accounts");
 		      	var newAcc = {
 		      		"accountHolder":"Mario Liebeafdm",
-		      		"accountNumber":"Mario@gmx.de",
+		      		"accountNumber":"Mario.Liebeafdm@paypal.com",
 		      		"accountReference":null,
 		      		"accountType":"PRIVATE",
 		      		"amount":"84.00",
@@ -56,7 +56,7 @@ sap.ui.define([
 		      	acc.push(newAcc);
 		      	newAcc = {
 		      		"accountHolder":"Mario Liebeafdm",
-		      		"accountNumber":"Mario@gmx.de",
+		      		"accountNumber":"Mario.Liebeafdm@satoshi-pay.com",
 		      		"accountReference":null,
 		      		"accountType":"PRIVATE",
 		      		"amount":"34.83523523",

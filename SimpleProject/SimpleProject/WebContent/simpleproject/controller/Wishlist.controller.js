@@ -18,9 +18,10 @@ sap.ui.define([
 		oView = this.getView();
 		_caller = this.getView();
     	var me = this;
-        models.getList("Wishes", function(wishlist) {
-    		console.log(wishlist);
-            me.getView().setModel(new JSONModel(wishlist));
+        models.getList("Wishes", function(wishList) {
+    		console.log(wishList);
+    		var wishModel = new JSONModel(wishList);
+            me.getView().setModel(wishModel);
         });
         },
         onNavBack: function(oEvent){
@@ -44,8 +45,19 @@ sap.ui.define([
         	var product =  sap.ui.getCore().byId("tf_product").getValue();
         	var price = sap.ui.getCore().byId("tf_price").getValue();
         	var date = sap.ui.getCore().byId("tf_date").getValue();
-        	alert("saved!");	
-        	this._dialog.close();
+        	var jsonObject =  {'product':product, 'price': price,'date':date};
+        	var me=this;
+        	
+        	models.create("Wishes",jsonObject,function(data){
+        		console.log(data);
+        		models.getList("Wishes", function(wishList) {
+		    		console.log(wishList);
+		    		 var wishModel = new JSONModel(wishList);
+            me.getView().setModel(wishModel);
+            sap.m.MessageToast.show("New Wish is saved!",{duration: 2000});
+		        });
+        });
+        this._dialog.close();
         }
         
     });
