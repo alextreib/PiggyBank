@@ -1,5 +1,7 @@
 var _caller;
 var _calc;
+var _diaMail;
+var _diaCreate;
 sap.ui.define([
     "sap/ui/model/json/JSONModel",
     "sap/ui/core/mvc/Controller",
@@ -33,13 +35,13 @@ sap.ui.define([
 				// connect dialog to view (models, lifecycle)
 			//	this.getView().addDependent(oDialog);
 			
-				if(!this._dialog){
-			this._dialog =  sap.ui.xmlfragment( "simpleproject.fragment.CreateNewWish", this);
+			//	if(!_diaCreate){
+			this._diaCreate =  sap.ui.xmlfragment( "simpleproject.fragment.CreateNewWish", this);
 		//	this.getView().addDependent(this._dialog);
-		}
+		//}
 		// open dialog
-		jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._dialog);
-		this._dialog.open();
+		jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._diaCreate);
+		this._diaCreate.open();
         },
         saveWish :function(oEvent)
         {	
@@ -61,7 +63,7 @@ sap.ui.define([
             sap.m.MessageToast.show("New Wish is saved!",{duration: 2000});
 		        });
         });
-        this._dialog.close();
+        this._diaCreate.close();
         },
         calcValue: function(oPrice)
         {
@@ -76,13 +78,13 @@ sap.ui.define([
         	return val + " %";
         },
         onShareWish: function(oEvent){
-        		if(!this._dialog){/**/
-			this._dialog =  sap.ui.xmlfragment( "simpleproject.fragment.SendMail", this);
+        		if(!this._diaMail){/**/
+			this._diaMail =  sap.ui.xmlfragment( "simpleproject.fragment.SendMail", this);
 		//	this.getView().addDependent(this._dialog);
 		}/**/
 		// open dialog
-		jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._dialog);
-		this._dialog.open();
+		jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._diaMail);
+		this._diaMail.open();
         },
         sendMail: function(oEvent){
         	var wish = sap.ui.getCore().byId("sWish").getSelectedKey();
@@ -97,7 +99,7 @@ sap.ui.define([
           //  sap.m.MessageToast.show("The person is informed about your Wish!",{duration: 2000});
           });
           
-        	this._dialog.close();
+        	this._diaMail.close();
         	sap.m.MessageToast.show("The person is informed about your Wish!",{duration: 2000});
           
            
