@@ -7,5 +7,8 @@ sap.ui.controller("simpleproject.controller.Consultant", {
 */
 	onInit: function() {
 
-	}
+	},
+	onNavBack: function(oEvent){
+        	sap.ui.controller("simpleproject.controller.Account").onNavBack();
+        }
 });

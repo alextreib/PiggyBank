@@ -38,7 +38,7 @@
 			</List>
 				
 				<core:Title text="Visualization" />
-				<Image  src="http://docs.oracle.com/javafx/2/charts/img/pie-sample.png" width="20em" >
+				<Image  src="images/account_overview.jpg" width="40em" >
 	   			<layoutData>
 	   				<l:GridData span="L12 M12 S12"
 	   				linebreakL="true"

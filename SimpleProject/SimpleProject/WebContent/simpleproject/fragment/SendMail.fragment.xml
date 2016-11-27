@@ -4,7 +4,7 @@
   <f:SimpleForm id="sendMailForm" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="Send Mail" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
    <f:content>
    	<Label text="Wish"/>
-    <Select width="100%" items="{ path:'wishModel>/'}">
+    <Select width="100%" items="{ path:'wishModel>/'}" id="sWish">
 			<core:Item key="{wishModel>product}" text="{wishModel>product}" />
 	</Select>
     <Label text="To"/>
