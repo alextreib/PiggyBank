@@ -48,7 +48,15 @@ sap.ui.define([
         	var ruleName =  sap.ui.getCore().byId("tf_ruleName").getValue();
         	var border = sap.ui.getCore().byId("tf_border").getValue();
         	var purpose = sap.ui.getCore().byId("tf_purpose").getValue();
-        	alert("saved!");	
+        	var jsonObject =  {'ruleName':ruleName, 'border': border,'purpose':purpose};
+        	var me = this;
+        	models.create("Rule",jsonObject,function(data){
+        		console.log(data);
+        		models.getList("rules", function(ruleList) {
+		    		console.log(ruleList);
+		            me.getView().setModel(ruleList);
+		        });
+        	});	
         	this._dialog.close();
         }
         

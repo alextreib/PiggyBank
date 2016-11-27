@@ -22,7 +22,7 @@
 			maxContainerCols="2"
 			editable="false"
 			layout="ResponsiveGridLayout"
-			title="Address"
+			title=""
 			labelSpanL="4"
 			labelSpanM="4"
 			emptySpanL="0"
@@ -86,5 +86,4 @@
   			</OverflowToolbar>
   		</footer>
 	</Page>
-	<Label text="Account page"></Label>
 </mvc:View>

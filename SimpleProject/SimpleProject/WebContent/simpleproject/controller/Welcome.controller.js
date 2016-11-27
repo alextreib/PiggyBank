@@ -9,7 +9,8 @@ sap.ui.controller("simpleproject.controller.Welcome", {
   			oArgs = oEvent.getParameter("arguments");
   			oView = this.getView();
 
-  			var oModel = new sap.ui.model.json.JSONModel({uname : oArgs.path});
+  		//	var oModel = new sap.ui.model.json.JSONModel({uname : oArgs.path});
+  		var	oModel = sap.ui.getCore().getModel("userModel");
   			oView.setModel(oModel);
 //  			oView.bindElement({
 //  				path : "/" + oArgs.path + "",

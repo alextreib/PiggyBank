@@ -2,7 +2,7 @@
   <Panel class="sapUiLargeMarginBegin" backgroundDesign="Transparent">
     <l:Grid class="sapUiSmallMarginTop">
         <l:content>
-            <Label design="Bold" defaultIndent="L12 M12 S12" text="Welcome User!" textAlign="Center" level="H1"/>
+            <Label design="Bold" defaultIndent="L12 M12 S12" text="Welcome {/userName} !" textAlign="Center" level="H1"/>
         </l:content></l:Grid>
     
     </Panel>

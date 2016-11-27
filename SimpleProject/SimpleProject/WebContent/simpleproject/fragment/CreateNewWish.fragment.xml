@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
  <Dialog>
  <VBox class="sapUiSmallMargin">
-  <f:SimpleForm id="createRuleForm" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="New Wish" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
+  <f:SimpleForm id="createWishForm" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="New Wish" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
    <f:content>
     <Label text="Product"/>
     <Input value="{Product}" id="tf_product" placeholder="your new IT gadget" required="true"/>

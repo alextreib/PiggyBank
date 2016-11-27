@@ -16,7 +16,9 @@ sap.ui.controller("simpleproject.controller.Home", {
 		// begin section busy indicator
 		var dialog = this.handleDialog(oEvent,name);
 		// end Section busy indicator
-		
+				var rowData = {'userName':name, 'password': this.byId("pwUser").getValue()};
+		var userModel = new  sap.ui.model.json.JSONModel(rowData);
+		sap.ui.getCore().setModel(userModel,"userModel");
 		//routing to the welcome page!
 		//this.getOwnerComponent().getRouter().navTo("Welcome",{ path : name});
 	},

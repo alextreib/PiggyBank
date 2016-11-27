@@ -36,8 +36,42 @@ sap.ui.define([
 		     "x-auth": _token_id,
 		                },
 		      success: function (data) {
+		      	
 		      	var model = new sap.ui.model.json.JSONModel(data);
+		      	var acc = model.getProperty("/accounts");
+		      	var newAcc = {
+		      		"accountHolder":"Mario Liebeafdm",
+		      		"accountNumber":"Mario@gmx.de",
+		      		"accountReference":null,
+		      		"accountType":"PRIVATE",
+		      		"amount":"84.00",
+		      		"amountAvailable":null,
+		      		"bankName":"PayPal",
+		      		"bic":"",
+		      		"creditLimit":"4000.00",
+		      		"currency":"EUR",
+		      		"paymentName":"Mario Liebeafdm",
+		      		"productDescription":"PayPal"
+		      	};
+		      	acc.push(newAcc);
+		      	newAcc = {
+		      		"accountHolder":"Mario Liebeafdm",
+		      		"accountNumber":"Mario@gmx.de",
+		      		"accountReference":null,
+		      		"accountType":"PRIVATE",
+		      		"amount":"34.83523523",
+		      		"amountAvailable":null,
+		      		"bankName":"BitCoin",
+		      		"bic":"",
+		      		"creditLimit":"4000.00",
+		      		"currency":"BTC",
+		      		"paymentName":"Mario Liebeafdm",
+		      		"productDescription":"BitCoin"
+		      	};
+		      	acc.push(newAcc);
+		      	model.setProperty("/accounts", acc);
 		      	oCaller.setModel(model);
+		      	
 		      	sap.ui.getCore().setModel(model,"mAcc");
 		      },
 		      error: function (data) {
@@ -51,4 +85,3 @@ sap.ui.define([
 	  }
     });
 });
-
