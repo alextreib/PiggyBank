@@ -88,16 +88,18 @@ sap.ui.define([
         	var wish = sap.ui.getCore().byId("sWish").getSelectedKey();
         	var recipient = sap.ui.getCore().byId("tf_recipient").getValue();
         	var msg = sap.ui.getCore().byId("tf_message").getValue();
-        	var body = "<h1>PiggyBank Share Service</h1>" + "<p>Hello, </p>" + "<p> ... wants product and asks for your help. Do you want to support him? </p>"
+        	var body = "<h1>PiggyBank Share Service</h1>" + "<p>Hello, </p>" + "<p>"+sap.ui.getCore().getModel("userModel").getData().userName+"  wants a product and asks for your help. Do you want to support him? </p>"
         	+"<p>Wish:"+wish+"</p>"+"<p>Message:"+msg+"</p>";
         	models.sendMail(recipient, "Shared Wish",body,function(data)
           {
-            console.log(data);
+            //console.log(data);
             
-            sap.m.MessageToast.show("The person is informed about your Wish!",{duration: 2000});
+          //  sap.m.MessageToast.show("The person is informed about your Wish!",{duration: 2000});
           });
           
         	this._dialog.close();
+        	sap.m.MessageToast.show("The person is informed about your Wish!",{duration: 2000});
+          
            
                    }
         
