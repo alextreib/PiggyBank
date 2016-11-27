@@ -41,7 +41,7 @@
            </Image>
         
         <core:Title text="User statistics" />
-        <Image  src="images/expense_overview.jpg" width="40em" >
+        <Image  src="images/user_statistics.jpg" width="40em" >
            <layoutData>
              <l:GridData span="L12 M12 S12"
              linebreakL="true"
