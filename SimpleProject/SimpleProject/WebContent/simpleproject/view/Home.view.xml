@@ -2,6 +2,7 @@
    <l:Grid class="sapUiSmallMarginTop" hSpacing="2" defaultIndent="L3 M2 S1" defaultSpan="L6 M6 S10" position="Center">
   <l:content>
     <Panel width="auto" class="sapUiLargeMarginBegin sapUiLargeMarginBottom" backgroundDesign="Transparent">
+    	
     <l:Grid class="sapUiSmallMarginTop" hSpacing="5" defaultIndent="L3 M2 S1" defaultSpan="L6 M6 S10"><Title text="Welcome to PiggyBank!" textAlign="Center" level="H1"/></l:Grid>
    
    <f:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"  labelSpanL="3" labelSpanM="3" emptySpanL="6" emptySpanM="4" columnsL="1" columnsM="1">
@@ -20,4 +21,3 @@
   </l:content>
  </l:Grid>
 </mvc:View>
-
