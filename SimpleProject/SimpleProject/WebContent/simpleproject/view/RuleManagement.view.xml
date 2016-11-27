@@ -4,8 +4,8 @@
 	<Page showHeader="true" title="Accounting Rule Management" >
 		<content>
 			<VBox>
-				<List items="" showNoData="false">
-					
+				<List items="{/}" showNoData="false">
+						<ObjectListItem title="{ruleName}" type="Navigation" ></ObjectListItem>
 				</List>
 			</VBox>
 		</content>

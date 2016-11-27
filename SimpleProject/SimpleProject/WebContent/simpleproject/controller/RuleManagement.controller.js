@@ -20,7 +20,8 @@ sap.ui.define([
     	var me = this;
         models.getList("rules", function(ruleList) {
     		console.log(ruleList);
-            me.getView().setModel(ruleList);
+    		var ruleModel = new JSONModel(ruleList);
+            me.getView().setModel(ruleModel);
         });
         },
         onNavBack: function(oEvent){
@@ -54,7 +55,8 @@ sap.ui.define([
         		console.log(data);
         		models.getList("rules", function(ruleList) {
 		    		console.log(ruleList);
-		            me.getView().setModel(ruleList);
+		    		    		var ruleModel = new JSONModel(ruleList);
+            me.getView().setModel(ruleModel);
 		        });
         	});	
         	this._dialog.close();
