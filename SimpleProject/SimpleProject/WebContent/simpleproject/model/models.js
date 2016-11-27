@@ -79,7 +79,6 @@ sap.ui.define([
         });
       },
       sendMail: function (mail, subject, body, callback) {
-<<<<<<< HEAD
       	var me = this;
       	var obj = {
 		  "toAddress": mail,
@@ -110,38 +109,6 @@ sap.ui.define([
                 callback(data);
               }
         	});
-=======
-        var me = this;
-        var obj = {
-      "toAddress": mail,
-      "fromAddress": "noreply@"+me.tenant+".mail.yaas.io",
-      "fromName": "PiggyBank",
-      "attributes":[
-            {
-                "key": "body",
-                "value": body 
-            },
-            {
-                "key": "subject",
-                "value": subject
-            }
-      ]
-    };
-    me._getOAuthToken(function(oauth_token) {
-          jQuery.ajax({
-              type: "POST",
-              contentType: "application/json",
-              url: me.api + "/email/v1/" + me.tenant + "/send-sync",
-              data: JSON.stringify(obj),
-              dataType: "json",
-              headers: {
-                Authorization: 'Bearer ' + oauth_token
-              },
-              success: function (data) {
-                callback(data);
-              }
-          });
->>>>>>> branch 'master' of https://github.com/alextreib/PiggyBank
         });
       }
   };

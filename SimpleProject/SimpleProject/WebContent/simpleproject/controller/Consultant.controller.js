@@ -8,13 +8,7 @@ sap.ui.controller("simpleproject.controller.Consultant", {
 	onInit: function() {
 
 	},
-<<<<<<< HEAD
 	onNavBack: function(oEvent){
         	sap.ui.controller("simpleproject.controller.Account").onNavBack();
         }
-=======
-	 onNavBack: function(){
-	        window.history.go(-1);
-	  }
->>>>>>> branch 'master' of https://github.com/alextreib/PiggyBank/
 });
