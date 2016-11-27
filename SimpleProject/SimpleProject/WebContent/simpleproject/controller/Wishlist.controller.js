@@ -42,6 +42,7 @@ sap.ui.define([
         },
         saveWish :function(oEvent)
         {	
+  
         	var product =  sap.ui.getCore().byId("tf_product").getValue();
         	var price = sap.ui.getCore().byId("tf_price").getValue();
         	var date = sap.ui.getCore().byId("tf_date").getValue();

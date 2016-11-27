@@ -7,5 +7,8 @@ sap.ui.controller("simpleproject.controller.Consultant", {
 */
 	onInit: function() {
 
-	}
+	},
+	 onNavBack: function(){
+	        window.history.go(-1);
+	  }
 });
