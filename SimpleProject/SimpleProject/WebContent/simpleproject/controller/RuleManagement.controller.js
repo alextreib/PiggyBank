@@ -58,6 +58,9 @@ sap.ui.define([
 		    		    		var ruleModel = new JSONModel(ruleList);
             me.getView().setModel(ruleModel);
             		      		sap.m.MessageToast.show("New Rule is saved!",{duration: 2000});
+            	sap.ui.getCore().byId("tf_ruleName").setValue("");
+        	 sap.ui.getCore().byId("tf_border").setValue("");
+        	sap.ui.getCore().byId("tf_purpose").setValue("");
 		        });
         	});	
         	this._dialog.close();

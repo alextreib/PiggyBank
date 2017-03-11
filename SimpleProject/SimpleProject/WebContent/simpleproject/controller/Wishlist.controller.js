@@ -35,10 +35,10 @@ sap.ui.define([
 				// connect dialog to view (models, lifecycle)
 			//	this.getView().addDependent(oDialog);
 			
-			//	if(!_diaCreate){
+				if(!this._diaCreate){
 			this._diaCreate =  sap.ui.xmlfragment( "simpleproject.fragment.CreateNewWish", this);
 		//	this.getView().addDependent(this._dialog);
-		//}
+		}
 		// open dialog
 		jQuery.sap.syncStyleClass("sapUiSizeCompact", this.getView(), this._diaCreate);
 		this._diaCreate.open();
@@ -61,6 +61,9 @@ sap.ui.define([
             
     		sap.ui.getCore().setModel(wishModel,"wishModel");
             sap.m.MessageToast.show("New Wish is saved!",{duration: 2000});
+            sap.ui.getCore().byId("tf_product").setValue("");
+        	sap.ui.getCore().byId("tf_price").setValue("");
+        	sap.ui.getCore().byId("tf_date").setValue("");
 		        });
         });
         this._diaCreate.close();
@@ -98,6 +101,8 @@ sap.ui.define([
             
           //  sap.m.MessageToast.show("The person is informed about your Wish!",{duration: 2000});
           });
+          sap.ui.getCore().byId("tf_recipient").setValue("");
+        	sap.ui.getCore().byId("tf_message").setValue("");
           
         	this._diaMail.close();
         	sap.m.MessageToast.show("The person is informed about your Wish!",{duration: 2000});
