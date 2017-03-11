@@ -11,13 +11,13 @@ sap.ui.define([
 
    return Controller.extend("simpleproject.controller.Wishlist", {
         onInit: function () {
-        var router =  this.getOwnerComponent().getRouter();
+/*        var router =  this.getOwnerComponent().getRouter();
 		router.getRoute("WishList").attachMatched(this._onRouteMatched,this);
         },
         _onRouteMatched : function(oEvent){
-		var oArgs, oView;
-		oArgs = oEvent.getParameter("arguments");
-		oView = this.getView();
+*/		var oArgs, oView;
+/*		oArgs = oEvent.getParameter("arguments");
+*/		oView = this.getView();
 		_caller = this.getView();
     	var me = this;
         models.getList("Wishes", function(wishList) {

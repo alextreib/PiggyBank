@@ -14,13 +14,13 @@ sap.ui.define([
             console.log(accounts);
             me.getView().setModel(accounts);
           });
-		var router =  this.getOwnerComponent().getRouter();
+/*		var router =  this.getOwnerComponent().getRouter();
 		router.getRoute("Account").attachMatched(this._onRouteMatched,this);
         },
         _onRouteMatched : function(oEvent){
-		var oArgs, oView;
-		oArgs = oEvent.getParameter("arguments");
-		oView = this.getView();
+*/		var oArgs, oView;
+/*		oArgs = oEvent.getParameter("arguments");
+*/		oView = this.getView();
 		_caller = this.getView();
 			this.getAccounts(_caller);
 	},
@@ -29,7 +29,7 @@ sap.ui.define([
 		  jQuery.ajax({
 		                type: "GET",
 		                contentType: "application/x-www-form-urlencoded",
-		                url: "https://hackathon.postbank.de:443/bank-api/gold/postbankid/?refreshCache=false",
+		                url: "https://hackathon.postbank.de:443/bank-api/gold/postbankid/?refreshCache=true",
 		                dataType: "json",
 		                headers: {
 		                 "API-Key": "485430390021fc15",

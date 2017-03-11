@@ -9,13 +9,13 @@ sap.ui.define([
 
    return Controller.extend("simpleproject.controller.RuleManagement", {
         onInit: function () {
-        var router =  this.getOwnerComponent().getRouter();
+/*        var router =  this.getOwnerComponent().getRouter();
 		router.getRoute("RuleManagement").attachMatched(this._onRouteMatched,this);
         },
         _onRouteMatched : function(oEvent){
-		var oArgs, oView;
-		oArgs = oEvent.getParameter("arguments");
-		oView = this.getView();
+*/		var oArgs, oView;
+/*		oArgs = oEvent.getParameter("arguments");
+*/		oView = this.getView();
 		_caller = this.getView();
     	var me = this;
         models.getList("rules", function(ruleList) {

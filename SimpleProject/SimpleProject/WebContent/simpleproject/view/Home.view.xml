@@ -1,23 +1,35 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="simpleproject.controller.Home">
-   <l:Grid class="sapUiSmallMarginTop" hSpacing="2" defaultIndent="L3 M2 S1" defaultSpan="L6 M6 S10" position="Center">
-  <l:content>
-    <Panel width="auto" class="sapUiLargeMarginBegin sapUiLargeMarginBottom" backgroundDesign="Transparent">
-    	
-    <l:Grid class="sapUiSmallMarginTop" hSpacing="5" defaultIndent="L3 M2 S1" defaultSpan="L6 M6 S10"><Title text="Welcome to PiggyBank!" textAlign="Center" level="H1"/></l:Grid>
-   
-   <f:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"  labelSpanL="3" labelSpanM="3" emptySpanL="6" emptySpanM="4" columnsL="1" columnsM="1">
-    <f:content>
-     <Label text="Username" /> 
-     <Input type="text" id="userID" placeholder="Name"/>
-     <Label text="Password"></Label> 
-     <Input type="Password" id="pwUser" placeholder="Password" maxLength="10" required="true" liveChange="onChange"/>
-     <Label/>
-     <Label/>
-     <Label/>
-     <Button text="Login" icon="sap-icon://begin" press="onLogin"/>
-    </f:content>
-   </f:SimpleForm>
-   </Panel>
-  </l:content>
- </l:Grid>
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml" controllerName="simpleproject.controller.Home">
+	<l:Grid class="sapUiSmallMarginTop" hSpacing="2" defaultIndent="L3 M2 S1" defaultSpan="L6 M6 S10" position="Center">
+		<l:content>
+			<Panel width="auto" class="sapUiLargeMarginBegin sapUiLargeMarginBottom" backgroundDesign="Transparent">
+				<Carousel>
+					<pages>
+						<Image src="images/logo.png" width="40em"/>
+						<Image src="images/logo.png" width="40em"/>
+						<Title text="This is awesome" titleStyle="H1" textAlign="Center" height="50%"/>
+					</pages>
+				</Carousel>
+				<Panel>
+					<headerToolbar>
+						<Toolbar>
+							<Title text="Welcome to your Piggy Bank account" titleStyle="H1"/>
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<f:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="6" emptySpanM="4"
+							columnsL="1" columnsM="1">
+							<f:content>
+								<Label text="Username"/>
+								<Input type="text" id="userID" placeholder="Name" required="true"/>
+								<Label text="Password"></Label>
+								<Input type="Password" id="pwUser" placeholder="Password" maxLength="10" required="true" liveChange="onChange"/>
+								<Button text="Login" icon="sap-icon://begin" press="onLogin"/>
+							</f:content>
+						</f:SimpleForm>
+					</content>
+				</Panel>
+			</Panel>
+		</l:content>
+	</l:Grid>
 </mvc:View>

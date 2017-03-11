@@ -1,80 +1,74 @@
-<mvc:View controllerName="simpleproject.controller.Wishlist"
-  xmlns:mvc="sap.ui.core.mvc"
-  xmlns:core="sap.ui.core"
-  xmlns="sap.m"
-  	xmlns:l="sap.ui.layout">
-	<Page showHeader="true" title="Wishlist" >
+<mvc:View controllerName="simpleproject.controller.Wishlist" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+	<Toolbar>
+		<Label text="Share a Wish"/>
+		<Button icon="sap-icon://share-2" press="onShareWish" ariaLabelledBy="actionButtonLabel">
+			<layoutData>
+				<OverflowToolbarLayoutData moveToOverflow="false" tooltip="Share a wish"/>
+			</layoutData>
+		</Button>
+		<ToolbarSpacer/>
+		<Label text="Create a Wish"/>
+		<Button icon="sap-icon://activate" press="onNewWishCreate" ariaLabelledBy="actionButtonLabel" tooltip="Create a new Wish">
+			<layoutData>
+				<OverflowToolbarLayoutData moveToOverflow="false"/>
+			</layoutData>
+		</Button>
+	</Toolbar>
+	<Panel>
 		<content>
 			<VBox>
 				<List items="{/}" showNoData="false">
 					<items>
- 						<CustomListItem>
+						<CustomListItem>
 							<HBox class="sapUiSmallMarginBegin smallUiTinyMarginTop">
 								<VBox>
-									<core:Icon
-									src="sap-icon://approvals"
-									size="2.5em"
-									 class="sapMSLIImgThumbIcon sapUiIcon sapUiIconMirrorInRTL">
+									<core:Icon src="sap-icon://approvals" size="2.5em" class="sapMSLIImgThumbIcon sapUiIcon sapUiIconMirrorInRTL">
 										<core:layoutData>
-										<FlexItemData growFactor="1"></FlexItemData>
-									</core:layoutData>
+											<FlexItemData growFactor="1"></FlexItemData>
+										</core:layoutData>
 									</core:Icon>
-									
 								</VBox>
 								<VBox>
-									<Label text="{product}" />
+									<Label text="{product}"/>
 									<Label text="Price: {price}"/>
 									<Label text="Deadline: {date}"/>
-									<!--<ProgressIndicator
-									class="sapUiSmallMargin"
-									percentValue="{path: '/price', formatter: '.calcValue'}" 
-									displayValue="{path: '/price', formatter: '.convertPercValue'}" 
-									showValue="true"
-									state="None" />-->
 								</VBox>
-								<!--<VBox>
-									<Button icon="sap-icon://action" press="onShare" ariaLabelledBy="actionButtonLabel"/>
-								</VBox>-->
 							</HBox>
-							<l:VerticalLayout
-		class="sapUiContentPadding"
-		width="100%">
-							<l:content>
-							<ProgressIndicator
-									class="sapUiSmallMarginBottom"
-									percentValue="{path: '/price', formatter: '.calcValue'}" 
-									displayValue="{path: '/price', formatter: '.convertPercValue'}" 
-									showValue="true"
-									state="None" />
-									</l:content>
-									</l:VerticalLayout>
-									
+							<l:VerticalLayout class="sapUiContentPadding" width="100%">
+								<l:content>
+									<ProgressIndicator class="sapUiSmallMarginBottom" percentValue="{path: '/price', formatter: '.calcValue'}"
+										displayValue="{path: '/price', formatter: '.convertPercValue'}" showValue="true" state="None"/>
+								</l:content>
+							</l:VerticalLayout>
 						</CustomListItem>
-		<!--					<ObjectListItem title="{ruleName}" type="Navigation" ></ObjectListItem>-->
-				</items>
+					</items>
 				</List>
 			</VBox>
 		</content>
+	</Panel>
+	<!--	<Page>
 		<footer>
-  			<OverflowToolbar>
-  				<Button type="Back" press="onNavBack">
-  					<layoutData>
-  						<OverflowToolbarLayoutData moveToOverflow="false" />
-  					</layoutData>
-  				</Button>
-  				<ToolbarSpacer />
-  				<Button icon="sap-icon://share-2" press="onShareWish" ariaLabelledBy="actionButtonLabel">
-  					<layoutData>
-  						<OverflowToolbarLayoutData moveToOverflow="false" tooltip="Share a wish"/>
-  					</layoutData>
-  				</Button>
-  				<ToolbarSpacer />
-  				<Button icon="sap-icon://activate" press="onNewWishCreate" ariaLabelledBy="actionButtonLabel" tooltip="Create a new Wish">
-  					<layoutData>
-  						<OverflowToolbarLayoutData moveToOverflow="false" />
-  					</layoutData>
-  				</Button>
-  			</OverflowToolbar>
-  		</footer>
+			<OverflowToolbar>
+				<Button type="Back" press="onNavBack">
+					<layoutData>
+						<OverflowToolbarLayoutData moveToOverflow="false"/>
+					</layoutData>
+				</Button>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://share-2" press="onShareWish" ariaLabelledBy="actionButtonLabel">
+					<layoutData>
+						<OverflowToolbarLayoutData moveToOverflow="false" tooltip="Share a wish"/>
+					</layoutData>
+				</Button>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://activate" press="onNewWishCreate" ariaLabelledBy="actionButtonLabel" tooltip="Create a new Wish">
+					<layoutData>
+						<OverflowToolbarLayoutData moveToOverflow="false"/>
+					</layoutData>
+				</Button>
+			</OverflowToolbar>
+		</footer>
 	</Page>
+-->
 </mvc:View>
