@@ -5,8 +5,8 @@
 			<Panel width="auto" class="sapUiLargeMarginBegin sapUiLargeMarginBottom" backgroundDesign="Transparent">
 				<Carousel>
 					<pages>
-						<Image src="images/logo.png" width="40em"/>
-						<Image src="images/logo.png" width="40em"/>
+						<Image src="images/logo.png" width="20em"/>
+						<Image src="images/logo.png" width="20em"/>
 						<Title text="This is awesome" titleStyle="H1" textAlign="Center" height="50%"/>
 					</pages>
 				</Carousel>
@@ -24,7 +24,7 @@
 								<Input type="text" id="userID" placeholder="Name" required="true"/>
 								<Label text="Password"></Label>
 								<Input type="Password" id="pwUser" placeholder="Password" maxLength="10" required="true" liveChange="onChange"/>
-								<Button text="Login" icon="sap-icon://begin" press="onLogin"/>
+								<Button text="Login" icon="sap-icon://begin" press="onLogin" id="button"/>
 							</f:content>
 						</f:SimpleForm>
 					</content>
