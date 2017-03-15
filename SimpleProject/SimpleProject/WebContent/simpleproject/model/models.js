@@ -78,6 +78,24 @@ sap.ui.define([
               });
         });
       },
+      delete: function(table, id, callback){
+      	        var me = this;
+        me._getOAuthToken(function(oauth_token) {
+          jQuery.ajax({
+                  type: "DELETE",
+                  contentType: "application/json",
+                  url: me.api + "/document/v1/" + me.tenant + "/" + me.client + "/data/" + table+"/"+id,
+                  //data: JSON.stringify(obj),
+                  dataType: "json",
+                  headers: {
+                    Authorization: 'Bearer ' + oauth_token
+                },
+                  success: function (data) {
+                    callback(data);
+                  }
+              });
+        });
+      },
       sendMail: function (mail, subject, body, callback) {
       	var me = this;
       	var obj = {
