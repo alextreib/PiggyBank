@@ -34,9 +34,7 @@ sap.ui.define([
     		console.log(ds);
     		alert("is deleted");
     	});*/
-
     	
-    	//
         models.getList("rules", function(ruleList) {
     		console.log(ruleList);
     		var ruleModel = new JSONModel(ruleList);
