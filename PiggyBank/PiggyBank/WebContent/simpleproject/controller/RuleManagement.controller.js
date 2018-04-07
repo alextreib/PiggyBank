@@ -18,6 +18,23 @@ sap.ui.define([
 */		oView = this.getView();
 		_caller = this.getView();
     	var me = this;
+    	
+    	// Test
+    /*	models.delete("rules", "58c2d82a2284a4001dd24ce5", function(ds) {
+    		console.log(ds);
+    		alert("is deleted");
+    	});
+    	
+    	   	models.delete("rules", "58c319ee899dd2001d2546d1", function(ds) {
+    		console.log(ds);
+    		alert("is deleted");
+    	});
+    	
+    	    	models.delete("rules", "58c99252dd492f001d8361f1", function(ds) {
+    		console.log(ds);
+    		alert("is deleted");
+    	});*/
+    	
         models.getList("rules", function(ruleList) {
     		console.log(ruleList);
     		var ruleModel = new JSONModel(ruleList);
