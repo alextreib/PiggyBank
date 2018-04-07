@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+ <Dialog>
+ <VBox class="sapUiSmallMargin">
+  <f:SimpleForm id="sendMailForm" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" title="Send Mail" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1" class="editableForm">
+   <f:content>
+   	<Label text="Wish"/>
+    <Select width="100%" items="{ path:'wishModel>/'}" id="sWish">
+			<core:Item key="{wishModel>product}" text="{wishModel>product}" />
+	</Select>
+    <Label text="To"/>
+    <Input type="Email" value="{Recipient}" id="tf_recipient"/>
+    <Label text="Message"/>
+    <Input value="{Message}" id="tf_message"/>
+     <Button icon="sap-icon://email" press="sendMail" ariaLabelledBy="actionButtonLabel" text="Send Mail" type="Emphasized">
+      </Button>
+   </f:content>
+  </f:SimpleForm>
+ </VBox>
+ </Dialog>
+</core:FragmentDefinition>
